@@ -98,8 +98,9 @@ jobs:
         cd ${{ steps.strings.outputs.build-output-dir }}/bin/${{ env.CMAKE_BUILD_TYPE }}
         ./authserver --version
         ./worldserver --version
-        - name: Upload compiled binaries
-          uses: actions/upload-artifact@v4
-          with:
-          name: TrinityCore-Client-Binaries
-          path: ${{ steps.strings.outputs.build-output-dir }}/bin/${{ env.CMAKE_BUILD_TYPE }}/
+
+    - name: Upload compiled binaries
+      uses: actions/upload-artifact@v4
+      with:
+        name: TrinityCore-Client-Binaries
+        path: ${{ steps.strings.outputs.build-output-dir }}/bin/${{ env.CMAKE_BUILD_TYPE }}/
