@@ -6,6 +6,7 @@ on:
       - 'npcbots_3.3.5'
       - 'CI'
   pull_request:
+  workflow_dispatch:
 
 concurrency:
   group: ${{ github.head_ref }} || concat(${{ github.ref }}, ${{ github.workflow }})
