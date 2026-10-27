@@ -1,11 +1,6 @@
 name: Windows x64
 
 on:
-  push:
-    branches:
-      - 'npcbots_3.3.5'
-      - 'CI'
-  pull_request:
   workflow_dispatch:
 
 concurrency:
